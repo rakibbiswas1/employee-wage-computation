@@ -9,13 +9,16 @@ public class EmployeeWage {
 	        
 	        int employeeCheck = (int) (Math.random() * ((2 + 0) + 1));
 	        
-	        if(employeeCheck == 2) {
+	        switch (employeeCheck) {
+	        case 2:
 	        	dailyWage = fullTimeHour * wagePerHour;
 	            System.out.println("Employee is present full time");
-	        } else if (employeeCheck == 1) {
+	            break;
+	        case 1:
 	        	dailyWage = fullTimeHour * wagePerHour;
 	            System.out.println("Employee is present half time");
-	        } else {
+	            break;
+	        default:
 	        	System.out.println("Employee is absent");
 	        }
 	        System.out.println("Employee total wage is: " + dailyWage);
